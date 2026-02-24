@@ -3,266 +3,150 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>FBI — ADMIN — Back Office</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FBI — PAP Project</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&family=Share+Tech+Mono&display=swap"
-        rel="stylesheet">
-    <link href="tooplate-nexus-brew.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="static-pattern"></div>
-    <div class="hex-pattern"></div>
+<body class="bg-light">
 
-    <div class="bg-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        <div class="shape shape-4"></div>
-        <div class="shape shape-5"></div>
-    </div>
+    <div class="container-fluid">
+        <div class="row vh-100">
 
-    <div class="grid-overlay"></div>
+            <!-- SIDEBAR -->
+            <div class="col-12 col-md-3 col-lg-2 bg-dark text-white p-3">
+                <h4 class="text-center mb-4">🕵️ FBI</h4>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">FBI</div>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <span></span><span></span><span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#menu" class="nav-link">Mechanics</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home">
-        <h1 class="hero-title">FBI</h1>
-        <p class="hero-subtitle">Something you're not ready for.</p>
-        <div class="hero-buttons">
-            <a href="#about" class="cta-button">Explore Project</a>
-            <a href="#menu" class="cta-button cta-secondary">View Mechanics</a>
-        </div>
-    </section>
-
-    <!-- Mecânicas Section -->
-    <section id="menu">
-        <h2 class="glitch text-center">MECHANICS</h2>
-        <div class="menu-container">
-            <div class="menu-category">
-                <h3>Main Mechanics</h3>
-                <ul class="menu-list">
-
-                    <li>
-                        <span class="menu-item-name">Missions</span>
-                        <span class="menu-item-price">A system of objectives, difficulty, rewards, and
-                            progression.</span>
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item mb-2">
+                        <a class="nav-link active bg-secondary text-white" href="#">📊 Dashboard</a>
                     </li>
-
-                    <li>
-                        <span class="menu-item-name">Weapons & Attachments</span>
-                        <span class="menu-item-price">Weapons with attributes + optional tactical upgrades.</span>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="players.html">👤 Players</a>
                     </li>
-
-                    <li>
-                        <span class="menu-item-name">Achievements</span>
-                        <span class="menu-item-price">Badges, points, titles and exclusive rewards.</span>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="missions.html">🎯 Missions</a>
                     </li>
-
-                    <li>
-                        <span class="menu-item-name">Items</span>
-                        <span class="menu-item-price">Consumables, utilities, buffs, debuffs, and tools.</span>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="weapons.html">🔫 Weapons</a>
                     </li>
-
-                    <li>
-                        <span class="menu-item-name">NPCs & Enemies</span>
-                        <span class="menu-item-price">Interactions, dialogues, aggressive AI and specific
-                            patterns.</span>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="items.html">🧩 Items & Blueprints</a>
                     </li>
-
-                    <li>
-                        <span class="menu-item-name">Blueprints</span>
-                        <span class="menu-item-price">Crafting of weapons, gadgets and attachments.</span>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="system.html">⚙️ System</a>
                     </li>
-
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="index.html">🚪 Logout</a>
+                    </li>
                 </ul>
             </div>
-        </div>
-    </section>
 
+            <!-- MAIN CONTENT -->
+            <div class="col-12 col-md-9 col-lg-10 p-4">
 
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="glitch text-center">ABOUT</h2>
+                <!-- TOP BAR -->
+                <nav class="navbar navbar-light bg-white mb-4 rounded shadow-sm">
+                    <div class="container-fluid">
+                        <span class="navbar-text fw-bold">
+                            FBI — Admin Dashboard
+                        </span>
+                        <span>
+                            👤 Admin | <span class="badge bg-success">Online</span>
+                        </span>
+                    </div>
+                </nav>
 
-        <div class="about-tabs">
-            <button class="tab-button active" onclick="showTab('story')">Story</button>
-            <button class="tab-button" onclick="showTab('mission')">Mission</button>
-            <button class="tab-button" onclick="showTab('technology')">Technology</button>
-        </div>
+                <!-- STATS -->
+                <div class="row">
 
-        <!-- STORY -->
-        <div id="story" class="tab-content active">
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>The Birth of the FBI Project</h3>
-                    <p>The FBI project is developed as part of the PAP and was born with the goal of creating a complete
-                        game, combining exploration, tactical combat, progression and narrative.</p>
-                    <br>
-                    <p>The game presents a universe inspired by secret operations, advanced technology and conflicts
-                        between factions, where the player progresses through missions, upgrades and discoveries.</p>
-                    <br>
-                    <p>Each system — weapons, enemies, scenarios, crafting — was designed to be modular, expandable and
-                        interconnected, giving the player freedom to evolve in their own way.</p>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-body">
+                                <h6>Total Players</h6>
+                                <p class="fs-4 mb-0">1,284</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card text-white bg-success mb-3">
+                            <div class="card-body">
+                                <h6>Active Missions</h6>
+                                <p class="fs-4 mb-0">42</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card text-white bg-warning mb-3">
+                            <div class="card-body">
+                                <h6>Weapons</h6>
+                                <p class="fs-4 mb-0">87</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card text-white bg-danger mb-3">
+                            <div class="card-body">
+                                <h6>System Alerts</h6>
+                                <p class="fs-4 mb-0">2</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="about-image">
-                    <img src="images/ace.jpg" alt="Project FBI Illustration">
+
+                <!-- BOTTOM SECTION -->
+                <div class="row mt-4">
+
+                    <!-- RECENT ACTIVITY -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-dark text-white">
+                                Recent Game Activity
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Player <b>Ghost_01</b> completed mission “Black Ice”
+                                    </li>
+                                    <li class="list-group-item">New weapon unlocked: <b>MK-7 Raven</b></li>
+                                    <li class="list-group-item">Player <b>ShadowX</b> reached level 15</li>
+                                    <li class="list-group-item">Blueprint crafted: <b>Holo Sight</b></li>
+                                    <li class="list-group-item">Enemy type added: <b>Heavy Unit</b></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SYSTEM STATUS -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-secondary text-white">
+                                System Status
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Server:</strong> <span class="badge bg-success">Online</span></p>
+                                <p><strong>Database:</strong> <span class="badge bg-success">Connected</span></p>
+                                <p><strong>Players Online:</strong> 312</p>
+                                <p><strong>Version:</strong> FBI v0.3 (Prototype)</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
-        </div>
-
-        <!-- MISSION -->
-        <div id="mission" class="tab-content">
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>The Project's Objective</h3>
-                    <p>The game aims to showcase the integration of complex systems: database, mechanics, logic, modular
-                        organization and functional design.</p>
-                    <br>
-                    <p>The focus is to create an experience where every decision has an impact: managing weapons,
-                        completing missions, dealing with enemies, interacting with NPCs and unlocking achievements.</p>
-                    <br>
-                    <p>The player grows both in gameplay and in knowledge of the world, using resources, strategies and
-                        specific tools to advance.
-                </div>
-                <div class="about-image">
-                    <img src="images/Ron.jpg" alt="Mission Design Concept">
-                </div>
-            </div>
-        </div>
-
-        <!-- TECHNOLOGY -->
-        <div id="technology" class="tab-content">
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Systems and Structure</h3>
-                    <p>The project uses a structured database with dozens of relationships: weapons, missions, NPCs,
-                        enemies, items, blueprints and more.</p>
-                    <br>
-                    <p>The system was designed to be scalable, allowing new mechanics to be added without changing the
-                        base architecture.</p>
-                    <br>
-                    <p>The structure combines table links, game logic, categories, levels and rewards, creating an
-                        interactive and expandable world.
-                </div>
-                <div class="about-image">
-                    <img src="images/wildlands.jpg" alt="Tech Structure FBI">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container my-5">
-        <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/ace.jpg" class="d-block w-100" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/Ron.jpg" class="d-block w-100" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/wildlands.jpg" class="d-block w-100" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container my-5">
-        <h2 class="glitch text-center">PROGRESS</h2>
-        <div>
-            <h6>Game 0.5%</h6>
-            <div class="progress mb-3">
-                <div class="progress-bar" style="width:0.5%"></div>
-            </div>
-        </div>
-        <div class="progress mb-3">
-            <div class="progress-bar bg-success" style="width:20%">App 20%</div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar bg-danger" style="width:15%">Site 15%</div>
-        </div>
-    </section>
-
-    <section class="text-center my-5">
-        <div class="spinner-border text-info"></div>
-        <p>Loading the void...</p>
-    </section>
-
-    <div class="text-center my-5">
-        <button class="btn btn-outline-info" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
-            title="<strong>Functionality under development</strong><br><small>Eu tmb n sei o raio da funcionalidade – Gerbásio, The owner</small>">
-            Experimental Feature
-        </button>
-
-    </div>
-    <div class="text-center my-5">
-        <button class="btn btn-outline-info" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
-            title="<strong>Functionality under development</strong><br><small>I don't know the damn functionality either – Gerbásio, The owner</small>">
-            Experimental Feature
-        </button>
-
-    </div>
-
-    <div class="text-center my-5">
-        <a href="login_backoffice.html" class="btn btn-outline-info">Admin Acess</a>
-    </div>
-
-    <div class="toast position-fixed bottom-0 end-0 m-3" id="welcomeToast">
-        <div class="toast-header">
-            <strong class="me-auto">System</strong>
-            <button class="btn-close" data-bs-dismiss="toast"></button>
-        </div>
-        <div class="toast-body">
-            You shouldn't be here...<br>
-            Project integrity compromised...<br>
-            Initiating security protocol...<br>
-            Protocol 1: Link to the Pilot.<br>
-            Protocol 2: Uphold the Mission.<br>
-            Protocol 3: Protect the Pilot.<br>
-            BT-7274: "Goodbye Jack."<br>
-            Restarting system...<br>
-            Override complete...<br>
-            .--- .- -.-. -.- ..--..<br>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms</a>
-                <a href="#">Credits</a>
-            </div>
-            <div class="copyright">
-                © 2025 — PAP Project FBI
-                <br> Template: Tooplate
-            </div>
-        </div>
-    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
-    </script>
-    <script src="tooplate-nexus-scripts.js"></script>
 </body>
 
 </html>
