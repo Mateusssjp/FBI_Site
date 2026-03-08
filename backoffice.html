@@ -2,151 +2,263 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>FBI — ADMIN — Back Office</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FBI — Admin Dashboard</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="tooplate-nexus-brew.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
 </head>
 
-<body class="bg-light">
-
-    <div class="container-fluid">
-        <div class="row vh-100">
-
-            <!-- SIDEBAR -->
-            <div class="col-12 col-md-3 col-lg-2 bg-dark text-white p-3">
-                <h4 class="text-center mb-4">🕵️ FBI</h4>
-
-                <ul class="nav nav-pills flex-column">
-                    <li class="nav-item mb-2">
-                        <a class="nav-link active bg-secondary text-white" href="#">📊 Dashboard</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <a class="nav-link text-white" href="players.html">👤 Players</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <a class="nav-link text-white" href="missions.html">🎯 Missions</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <a class="nav-link text-white" href="weapons.html">🔫 Weapons</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <a class="nav-link text-white" href="items.html">🧩 Items & Blueprints</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <a class="nav-link text-white" href="system.html">⚙️ System</a>
-                    </li>
-                    <hr>
-                    <li class="nav-item">
-                        <a class="nav-link text-danger" href="index.html">🚪 Logout</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- MAIN CONTENT -->
-            <div class="col-12 col-md-9 col-lg-10 p-4">
-
-                <!-- TOP BAR -->
-                <nav class="navbar navbar-light bg-white mb-4 rounded shadow-sm">
-                    <div class="container-fluid">
-                        <span class="navbar-text fw-bold">
-                            FBI — Admin Dashboard
-                        </span>
-                        <span>
-                            👤 Admin | <span class="badge bg-success">Online</span>
-                        </span>
-                    </div>
-                </nav>
-
-                <!-- STATS -->
-                <div class="row">
-
-                    <div class="col-md-3">
-                        <div class="card text-white bg-primary mb-3">
-                            <div class="card-body">
-                                <h6>Total Players</h6>
-                                <p class="fs-4 mb-0">1,284</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card text-white bg-success mb-3">
-                            <div class="card-body">
-                                <h6>Active Missions</h6>
-                                <p class="fs-4 mb-0">42</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card text-white bg-warning mb-3">
-                            <div class="card-body">
-                                <h6>Weapons</h6>
-                                <p class="fs-4 mb-0">87</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="card text-white bg-danger mb-3">
-                            <div class="card-body">
-                                <h6>System Alerts</h6>
-                                <p class="fs-4 mb-0">2</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- BOTTOM SECTION -->
-                <div class="row mt-4">
-
-                    <!-- RECENT ACTIVITY -->
-                    <div class="col-md-6">
-                        <div class="card shadow-sm">
-                            <div class="card-header bg-dark text-white">
-                                Recent Game Activity
-                            </div>
-                            <div class="card-body">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Player <b>Ghost_01</b> completed mission “Black Ice”
-                                    </li>
-                                    <li class="list-group-item">New weapon unlocked: <b>MK-7 Raven</b></li>
-                                    <li class="list-group-item">Player <b>ShadowX</b> reached level 15</li>
-                                    <li class="list-group-item">Blueprint crafted: <b>Holo Sight</b></li>
-                                    <li class="list-group-item">Enemy type added: <b>Heavy Unit</b></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SYSTEM STATUS -->
-                    <div class="col-md-6">
-                        <div class="card shadow-sm">
-                            <div class="card-header bg-secondary text-white">
-                                System Status
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Server:</strong> <span class="badge bg-success">Online</span></p>
-                                <p><strong>Database:</strong> <span class="badge bg-success">Connected</span></p>
-                                <p><strong>Players Online:</strong> 312</p>
-                                <p><strong>Version:</strong> FBI v0.3 (Prototype)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+<body data-admin="true">
+  <div class="d-flex vh-100">
+    <aside class="d-none d-md-flex flex-column bg-dark border-end border-secondary" style="width: 280px">
+      <div class="p-4 text-center border-bottom border-secondary">
+        <div class="fs-4 fw-bold">FBI OPS</div>
+        <div class="text-muted small">Control Panel</div>
+      </div>
+      <nav class="nav flex-column p-3 gap-1">
+        <a class="nav-link text-light active" href="#dashboard" data-bs-toggle="tab">
+          <i class="bi bi-speedometer2 me-2"></i> Dashboard
+        </a>
+        <a class="nav-link text-light" href="#users" data-bs-toggle="tab">
+          <i class="bi bi-people-fill me-2"></i> Users
+        </a>
+        <a class="nav-link text-light" href="#missions" data-bs-toggle="tab">
+          <i class="bi bi-flag-fill me-2"></i> Missions
+        </a>
+        <a class="nav-link text-light" href="#system" data-bs-toggle="tab">
+          <i class="bi bi-gear-fill me-2"></i> System
+        </a>
+        <div class="mt-auto pt-3 border-top border-secondary">
+          <button id="logoutBtn" class="btn btn-outline-info w-100">
+            <i class="bi bi-box-arrow-right me-2"></i> Logout
+          </button>
         </div>
+      </nav>
+    </aside>
+
+    <div class="flex-fill d-flex flex-column">
+      <header class="d-flex align-items-center justify-content-between p-3 border-bottom border-secondary">
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-ghost d-md-none" data-bs-toggle="offcanvas" data-bs-target="#navDrawer">
+            <i class="bi bi-list fs-4"></i>
+          </button>
+          <div>
+            <div id="pageTitle" class="h5 mb-0">Admin Dashboard</div>
+            <small class="text-muted" id="adminEmail"></small>
+          </div>
+        </div>
+        <div class="d-flex gap-2 align-items-center">
+          <span class="badge bg-success">Online</span>
+          <button class="btn btn-ghost" id="settingsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="bi bi-gear-fill fs-5"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li class="dropdown-header" data-i18n="settings">Settings</li>
+            <li><small class="dropdown-item-text" data-i18n="language">Language</small></li>
+            <li><button class="dropdown-item" type="button" data-lang="en">English</button></li>
+            <li><button class="dropdown-item" type="button" data-lang="pt">Português</button></li>
+            <li><button class="dropdown-item" type="button" data-lang="it">Italiano</button></li>
+            <li><button class="dropdown-item" type="button" data-lang="es">Español</button></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><small class="dropdown-item-text" data-i18n="theme">Theme</small></li>
+            <li><button class="dropdown-item" type="button" data-theme="dark">Dark</button></li>
+            <li><button class="dropdown-item" type="button" data-theme="light">Light</button></li>
+          </ul>
+          <button id="logoutBtn" class="btn btn-outline-info">Logout</button>
+        </div>
+      </header>
+
+      <main class="flex-fill overflow-auto p-4">
+        <div class="tab-content">
+          <section class="tab-pane fade show active" id="dashboard">
+            <div class="row g-3">
+              <div class="col-12 col-md-6 col-xl-3">
+                <div class="card panel">
+                  <div class="card-body">
+                    <h6 class="text-uppercase text-muted">Total Players</h6>
+                    <div class="d-flex align-items-end justify-content-between">
+                      <span class="fs-3 fw-bold">1,284</span>
+                      <i class="bi bi-people-fill fs-3 text-info"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-3">
+                <div class="card panel">
+                  <div class="card-body">
+                    <h6 class="text-uppercase text-muted">Active Missions</h6>
+                    <div class="d-flex align-items-end justify-content-between">
+                      <span class="fs-3 fw-bold">42</span>
+                      <i class="bi bi-flag-fill fs-3 text-info"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-3">
+                <div class="card panel">
+                  <div class="card-body">
+                    <h6 class="text-uppercase text-muted">Weapons</h6>
+                    <div class="d-flex align-items-end justify-content-between">
+                      <span class="fs-3 fw-bold">87</span>
+                      <i class="bi bi-shield-lock-fill fs-3 text-info"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-xl-3">
+                <div class="card panel">
+                  <div class="card-body">
+                    <h6 class="text-uppercase text-muted">System Alerts</h6>
+                    <div class="d-flex align-items-end justify-content-between">
+                      <span class="fs-3 fw-bold">2</span>
+                      <i class="bi bi-exclamation-triangle-fill fs-3 text-info"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-4">
+              <div class="col-12 col-lg-6">
+                <div class="card panel">
+                  <div class="card-header bg-transparent border-bottom">
+                    Recent Activity
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item bg-transparent">Player <strong>Ghost_01</strong> completed mission �Black Ice�.</li>
+                      <li class="list-group-item bg-transparent">New weapon unlocked: <strong>MK-7 Raven</strong>.</li>
+                      <li class="list-group-item bg-transparent">Player <strong>ShadowX</strong> reached level 15.</li>
+                      <li class="list-group-item bg-transparent">Blueprint crafted: <strong>Holo Sight</strong>.</li>
+                      <li class="list-group-item bg-transparent">Enemy type added: <strong>Heavy Unit</strong>.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="card panel">
+                  <div class="card-header bg-transparent border-bottom">
+                    System Status
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-2"><strong>Server:</strong> <span class="badge bg-success">Online</span></p>
+                    <p class="mb-2"><strong>Database:</strong> <span class="badge bg-success">Connected</span></p>
+                    <p class="mb-2"><strong>Players Online:</strong> 312</p>
+                    <p class="mb-0"><strong>Version:</strong> FBI v0.3 (Prototype)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-pane fade" id="users">
+            <div class="card panel">
+              <div class="card-header bg-transparent border-bottom">
+                Users
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-dark table-striped align-middle mb-0">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Rank</th>
+                        <th>Level</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>001</td>
+                        <td>Ghost_01</td>
+                        <td>Sergeant</td>
+                        <td>22</td>
+                        <td><span class="badge bg-success">Online</span></td>
+                      </tr>
+                      <tr>
+                        <td>002</td>
+                        <td>ShadowX</td>
+                        <td>Commander</td>
+                        <td>15</td>
+                        <td><span class="badge bg-danger">Offline</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-pane fade" id="missions">
+            <div class="card panel">
+              <div class="card-header bg-transparent border-bottom">
+                Missions
+              </div>
+              <div class="card-body">
+                <p class="text-muted">A high-level view of all active mission parameters and progression.</p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item bg-transparent">Mission: <strong>Black Ice</strong> � Status: <span class="badge bg-warning">In Progress</span></li>
+                      <li class="list-group-item bg-transparent">Mission: <strong>Sunder</strong> � Status: <span class="badge bg-success">Complete</span></li>
+                      <li class="list-group-item bg-transparent">Mission: <strong>Phantom</strong> � Status: <span class="badge bg-secondary">Queued</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="progress" style="height: 18px;">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 63%;" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100">Overall Completion 63%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-pane fade" id="system">
+            <div class="card panel">
+              <div class="card-header bg-transparent border-bottom">
+                System Settings
+              </div>
+              <div class="card-body">
+                <p class="text-muted mb-3">Update system preferences and maintenance modes.</p>
+                <div class="mb-3">
+                  <label class="form-label">Maintenance Mode</label>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="maintenanceToggle" />
+                    <label class="form-check-label" for="maintenanceToggle">Enable maintenance mode</label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Notification Level</label>
+                  <select class="form-select">
+                    <option>All alerts</option>
+                    <option selected>Critical only</option>
+                    <option>Off</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <button class="btn btn-outline-info" id="saveSettingsBtn">Save settings</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
     </div>
+  </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="toast-container position-fixed top-0 end-0 p-3"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>

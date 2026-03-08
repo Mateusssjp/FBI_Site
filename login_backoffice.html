@@ -2,58 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FBI — Back Office</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FBI — Secure Login</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="tooplate-nexus-brew.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
 </head>
 
-<body class="bg-light">
-    <div class="container py-5" style="max-width: 400px;">
-        <h3 class="text-center mb-4">Back Office</h3>
-
-        <div id="error" class="alert alert-danger d-none">
-            Email ou password incorretos
+<body>
+  <div class="container d-flex vh-100 align-items-center justify-content-center">
+    <div class="card panel w-100" style="max-width: 420px;">
+      <div class="card-body">
+        <h4 class="card-title mb-3">FBI Secure Login</h4>
+        <form id="loginForm" class="mb-3">
+          <div class="mb-3">
+            <label class="form-label" for="loginEmail">Email</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="name@domain.com" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="loginPassword">Password</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required />
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Authenticate</button>
+        </form>
+        <div id="loginFeedback" class="alert alert-danger d-none" role="alert"></div>
+        <div class="text-center mt-3">
+          <a href="index.html" class="text-info">Back to Home</a>
         </div>
-
-        <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input id="email" type="email" class="form-control">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input id="password" type="password" class="form-control">
-        </div>
-
-        <button type="button" class="btn btn-dark w-100" onclick="login()">
-            Entrar
-        </button>
+      </div>
     </div>
+  </div>
 
-    <script>
-        function login() {
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
+  <div class="toast-container position-fixed top-0 end-0 p-3"></div>
 
-            console.log(email, password); // debug
-
-            if (
-                email === "mateusjp270@gmail.com" &&
-                password === "#Mateusl23"
-            ) {
-                window.location.href = "backoffice.html";
-            } else {
-                document.getElementById("error").classList.remove("d-none");
-            }
-        }
-    </script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
