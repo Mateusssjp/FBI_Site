@@ -19,17 +19,17 @@
   <div class="container d-flex vh-100 align-items-center justify-content-center">
     <div class="card panel w-100" style="max-width: 420px;">
       <div class="card-body">
-        <h4 class="card-title mb-3">FBI Secure Login</h4>
+        <h4 class="card-title mb-3" data-i18n="loginTitle">FBI Secure Login</h4>
         <form id="loginForm" class="mb-3">
           <div class="mb-3">
-            <label class="form-label" for="loginEmail">Email</label>
-            <input type="email" class="form-control" id="loginEmail" placeholder="name@domain.com" required />
+            <label class="form-label" for="loginEmail" data-i18n="loginEmail">Email</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="name@domain.com" data-i18n="loginEmail" required />
           </div>
           <div class="mb-3">
-            <label class="form-label" for="loginPassword">Password</label>
-              <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required />
+            <label class="form-label" for="loginPassword" data-i18n="loginPassword">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" data-i18n="loginPassword" required />
           </div>
-          <button type="submit" class="btn btn-primary w-100">Authenticate</button>
+          <button type="submit" class="btn btn-primary w-100" data-i18n="loginButton">Authenticate</button>
         </form>
         <div id="loginFeedback" class="alert alert-danger d-none" role="alert"></div>
         <div class="text-center mt-3">

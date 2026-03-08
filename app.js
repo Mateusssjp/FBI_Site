@@ -200,6 +200,9 @@
     const stored = localStorage.getItem('fbi_theme');
     if (stored) {
       setTheme(stored);
+    } else {
+      // Default to dark mode if not explicitly set
+      setTheme('dark');
     }
   };
 
